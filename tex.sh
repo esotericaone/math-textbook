@@ -7,6 +7,7 @@ fdir="${fullfilename%/*}"
     --load=org-sett.el \
     --visit=${fname}.org \
     --funcall org-export-as-latex
+latexmk ${fname}
 rm -f ${fname}.aux
 rm -f ${fname}.bbl
 rm -f ${fname}.blg
@@ -18,5 +19,5 @@ rm -f ${fname}.ilg
 rm -f ${fname}.ind
 rm -f ${fname}.log
 rm -f ${fname}.out
+rm -f ${fname}.tex~
 rm -f ${fname}.toc
-latexmk ${fname}
